@@ -1,0 +1,37 @@
+添加仓库：
+    git init
+
+add:
+    git add 文件名.txt
+    git add .
+
+查看当前状态（改了什么文件）：
+    git status
+
+详细查看这个文件是怎么改的：
+    git diff
+
+commit:
+    git commit -m "comment写在这里"
+
+
+
+版本回退：
+    查看历史记录：
+        git log
+
+        输出信息太多：
+            git log --pretty=oneline
+
+    回退上一个：
+        git reset --hard HEAD^
+
+    回退上上个：
+        git reset --hard HEAD^^
+
+    回退到指定的：
+        git reset --hard 版本号（五位即可）
+    
+    有每一次更改（找不到版本号可以找这个）：
+        git reflog
+

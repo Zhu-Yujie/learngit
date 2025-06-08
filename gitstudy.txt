@@ -40,3 +40,6 @@ git diff HEAD -- 文件名
 
 丢弃工作区的某个修改：
 git checkout -- readme.txt
+
+丢弃暂存区的某个修改
+git reset HEAD 文件名

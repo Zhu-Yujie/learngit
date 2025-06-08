@@ -8,11 +8,11 @@ add:
 查看当前暂存区（stage）状态（与工作区相比改了什么文件）：
     git status
 
-详细查看这个文件是怎么改的：
-    git diff
-
 commit:
     git commit -m "comment写在这里"
+
+查看工作区和暂存区的区别：
+    git diff
 
 查看工作区和版本库的区别：
 git diff HEAD -- 文件名

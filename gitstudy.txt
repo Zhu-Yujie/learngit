@@ -5,7 +5,7 @@ add:
     git add 文件名.txt
     git add .
 
-查看当前工作区（stage）状态（改了什么文件）：
+查看当前暂存区（stage）状态（与工作区相比改了什么文件）：
     git status
 
 详细查看这个文件是怎么改的：
@@ -16,7 +16,7 @@ commit:
 
 
 
-版本回退：
+版本回退（撤销撤销暂存区的更改）：
     查看历史记录：
         git log
 
@@ -35,5 +35,8 @@ commit:
     有每一次更改（找不到版本号可以找这个）：
         git reflog
 
-查看工作区和版本库的区别
+查看工作区和版本库的区别：
 git diff HEAD -- 文件名
+
+丢弃工作区的某个修改：
+git checkout -- readme.txt

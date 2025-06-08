@@ -5,7 +5,7 @@ add:
     git add 文件名.txt
     git add .
 
-查看当前状态（改了什么文件）：
+查看当前工作区（stage）状态（改了什么文件）：
     git status
 
 详细查看这个文件是怎么改的：
@@ -35,3 +35,5 @@ commit:
     有每一次更改（找不到版本号可以找这个）：
         git reflog
 
+查看工作区和版本库的区别
+git diff HEAD -- 文件名

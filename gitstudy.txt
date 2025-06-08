@@ -14,9 +14,16 @@ add:
 commit:
     git commit -m "comment写在这里"
 
+查看工作区和版本库的区别：
+git diff HEAD -- 文件名
 
+丢弃工作区的某个修改：
+git checkout -- readme.txt
 
-版本回退（撤销撤销暂存区的更改）：
+丢弃暂存区的某个修改
+git reset HEAD 文件名
+
+版本库版本回退（撤销撤销版本库的更改）：
     查看历史记录：
         git log
 
@@ -34,12 +41,3 @@ commit:
     
     有每一次更改（找不到版本号可以找这个）：
         git reflog
-
-查看工作区和版本库的区别：
-git diff HEAD -- 文件名
-
-丢弃工作区的某个修改：
-git checkout -- readme.txt
-
-丢弃暂存区的某个修改
-git reset HEAD 文件名

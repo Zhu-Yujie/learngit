@@ -41,3 +41,12 @@ git reset HEAD 文件名
     
     有每一次更改（找不到版本号可以找这个）：
         git reflog
+
+连接远程仓库：
+    git remote add origin 远程仓库地址
+
+推送上去：
+    git push -u origin master
+        把当前分支master推送到远程
+        -u：将本地分支与远程分支关联，以后只需写 git push
+    git push

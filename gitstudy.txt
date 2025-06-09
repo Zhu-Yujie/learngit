@@ -70,15 +70,41 @@ git reset HEAD 文件名
 
     查看当前分支：
         git branch
+    
+    查看远程仓库分支：
+        git branch -r
 
     dev的更改merge到master分支:
-        git merge dev
-    
+        把master的HEAD直接移到dev的提交：
+            git merge dev
+        新建一个提交：
+            git merge --no-ff -m "merge with no-ff" dev
+
     删除分支：
         git branch -d dev
+    
+    删除一个没有被合并过的分支：
+        git branch -D feature-vulcan
     
     解决冲突：
         手动解决master上和分支的冲突后删除dev
         查看分支合并情况：
             git log --graph --pretty=oneline --abbrev-commit
         
+    在dev开发时突然发现master有一个bug：
+        在dev分支上：
+            git stash
+        切回master修复bug：
+            git checkout master
+            git checkout -b issue-101
+            git add readme.txt
+            git commit -m "fix bug 101"
+        修好了，合并到 master：
+            git switch master
+            git merge --no-ff -m "merged bug fix 101" issue-101
+            git branch -d issue-101
+        回到你开发功能的 dev 分支，并恢复你藏起来的代码L：
+            git switch dev
+            git stash pop
+        我不想再手动修一次 bug，怎么办？
+            git cherry-pick 修bug时的commit-id

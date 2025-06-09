@@ -78,6 +78,7 @@ git reset HEAD 文件名
         git branch -d dev
     
     解决冲突：
+        手动解决master上和分支的冲突后删除dev
         查看分支合并情况：
             git log --graph --pretty=oneline --abbrev-commit
         

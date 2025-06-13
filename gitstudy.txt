@@ -14,11 +14,14 @@ commit:
 查看工作区和暂存区的区别：
     git diff
 
+查看某个commit具体改了什么文件：
+    git show <commit-id>
+
 查看工作区和版本库的区别：
-git diff HEAD -- 文件名
+    git diff HEAD -- 文件名
 
 丢弃工作区的某个修改：
-git checkout -- readme.txt
+    git checkout -- readme.txt
 
 丢弃暂存区的某个修改
 git reset HEAD 文件名
